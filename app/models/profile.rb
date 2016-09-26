@@ -1,3 +1,4 @@
 class Profile < ActiveRecord::Base
-   belongs_to :user 
+  validate :first_name, :last_name, :contact_email, presence: true
+  belongs_to :user 
 end
